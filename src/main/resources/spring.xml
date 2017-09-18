@@ -10,11 +10,18 @@
     <bean id="client" class="com.epam.spring.core.beans.Client">
         <constructor-arg value="1"/>
         <constructor-arg value="John Smith"/>
+        <property name="greeting" value="Hello there!"/>
     </bean>
 
     <bean id="app" class="com.epam.spring.core.App">
+        <constructor-arg>
+            <map>
+                <entry key="INFO" value-ref="fileEventLogger"/>
+                <entry key="ERROR" value-ref="combinedEventLogger"/>
+            </map>
+        </constructor-arg>
         <constructor-arg ref="client"/>
-        <constructor-arg ref="cacheFileLogger"/>
+        <constructor-arg ref="consoleEventLogger"/>
     </bean>
 
     <bean id="event" class="com.epam.spring.core.beans.Event" scope="prototype">

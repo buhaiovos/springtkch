@@ -1,1 +1,1 @@
-Event{id=0, msg='null', date=16 вер. 2017 1:08:04}Event{id=0, msg='null', date=16 вер. 2017 1:08:06}Event{id=0, msg='null', date=16 вер. 2017 1:11:57}Event{id=0, msg='null', date=16 вер. 2017 1:11:58}
+Event{id=0, msg='null', date=16 вер. 2017 1:08:04}Event{id=0, msg='null', date=16 вер. 2017 1:08:06}Event{id=0, msg='null', date=16 вер. 2017 1:11:57}Event{id=0, msg='null', date=16 вер. 2017 1:11:58}Event{id=0, msg='ERROR', date=18 вер. 2017 22:53:48}Event{id=0, msg='INFO', date=18 вер. 2017 22:54:35}Event{id=0, msg='ERROR', date=18 вер. 2017 22:54:37}

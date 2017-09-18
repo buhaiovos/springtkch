@@ -5,7 +5,7 @@
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="eventLogger" class="com.epam.spring.core.loggers.ConsoleEventLogger"/>
+    <bean id="consoleEventLogger" class="com.epam.spring.core.loggers.ConsoleEventLogger"/>
 
     <bean id="fileEventLogger"
           class="com.epam.spring.core.loggers.FileEventLogger" init-method="init">
@@ -18,6 +18,15 @@
           parent="fileEventLogger">
         <constructor-arg value="1"/>
         <property name="cache" ref="list"/>
+    </bean>
+
+    <bean id="combinedEventLogger" class="com.epam.spring.core.loggers.CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="consoleEventLogger"/>
+                <ref bean="fileEventLogger"/>
+            </list>
+        </constructor-arg>
     </bean>
 
     <bean id="list" class="java.util.ArrayList"></bean>
